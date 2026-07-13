@@ -150,6 +150,7 @@ namespace StudentResult
 
             Console.Write("New Mark: ");
             student.Mark = Convert.ToInt32(Console.ReadLine());
+            student.Grade = CalculateGrade(student.Mark);
 
             Console.WriteLine("Updated Successfully.");
         }
@@ -313,16 +314,11 @@ namespace StudentResult
         }
         static string CalculateGrade(int mark)
         {
-            if (mark >= 80)
-                return "A+";
-            else if (mark >= 70)
-                return "A";
-            else if (mark >= 60)
-                return "A-";
-            else if (mark >= 50)
-                return "B+";
-            else
-                return "F";
+            if (mark >= 80) return "A+";
+            else if (mark >= 70) return "A";
+            else if (mark >= 60) return "A-";
+            else if (mark >= 50) return "B+";
+            else return "F";
         }
 
 
