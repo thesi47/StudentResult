@@ -97,7 +97,7 @@ namespace StudentResult
                 return;
             }
             Console.Write("Enter Name: ");
-            student.Name = Console.ReadLine();
+            student.Name = Console.ReadLine()!;
 
             Console.Write("Enter Marks: ");
             student.Mark = Convert.ToInt32(Console.ReadLine());
@@ -146,7 +146,7 @@ namespace StudentResult
             }
 
             Console.Write("New Name: ");
-            student.Name = Console.ReadLine();
+            student.Name = Console.ReadLine()!;
 
             Console.Write("New Mark: ");
             student.Mark = Convert.ToInt32(Console.ReadLine());
@@ -192,7 +192,7 @@ namespace StudentResult
         static void SeachByName()
         {
             Console.Write("Enter Name: ");
-            string name = Console.ReadLine().ToLower();
+            string name = Console.ReadLine()!.ToLower();
 
             var result = students.Where(x => x.Name.ToLower().Contains(name));
 
@@ -252,7 +252,7 @@ namespace StudentResult
         static void DisplayByGrade()
         {
             Console.Write("Enter Grade: ");
-            string grade = Console.ReadLine().ToUpper();
+            string grade = Console.ReadLine()!.ToUpper();
 
             var result = students.Where(x => x.Grade == grade);
 
